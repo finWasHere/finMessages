@@ -2,9 +2,6 @@
 I wanted to rapidly build a small REST service to play around with.  Most of my work experience has been on existing services or on productionized highly-scalable environments.  Since I was focused on spinning something up quickly I chose Python 3 as the language for speed.  Additionally, I haven't had much experience with the Django framework yet, so I wanted to use the Django REST Framework.  By using this framework most of the REST boiler-plate code is already provided, which helps speed up development time.
 
 # Setup
-## TODO - Dockerize 
-To make setup and running easier and faster for people I could containerize the code with something like Docker.  It's user-friendly because it spins up a new virtual environment with all the environment configured and managed.  I haven't had time to play around with this yet.
-
 ## Install Python 3
 First you'll want to install Python 3.
 https://www.python.org/downloads/
@@ -104,7 +101,7 @@ Django REST Framework provides this by default via Users and Groups.  This could
 https://www.django-rest-framework.org/api-guide/authentication/  Authenticate via users and authorize via groups.
 
 ## Dockerize 
-By configuring Docker or some other container for this application it would be much easier to distribute and setup.  Containers like Docker manage the environment and dependencies so you don't have to do anything extra to set it up and run it.  I didn't have time yet to research how to set up a Docker container from scratch yet.  
+To make setup and running easier and faster for people I could containerize the code with something like Docker.  It's user-friendly because it spins up a new virtual environment with all the environment configured and managed.  Containers like Docker manage the environment and dependencies so you don't have to do anything extra to set it up and run it.  I didn't have time yet to research how to set up a Docker container from scratch yet.  
 
 # Additional Useful References
 * Quick Overview: https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c
