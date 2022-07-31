@@ -6,7 +6,8 @@ I wanted to rapidly build a small REST service to play around with.  Most of my 
 First you'll want to install Python 3.
 https://www.python.org/downloads/
 If you're on a Mac you can also use brew:
-$ brew install python@3.9
+
+`$ brew install python@3.9`
 
 To verify your installation try the following:
 $ python3 -V
@@ -20,7 +21,8 @@ You should see a folder called finMessages where you cloned it, and beneath that
 ## Import Dependencies
 I used Django and the Django REST Framework.  In order to make local environment setup easier I created a requirements.txt file.  This should be maintained if new dependencies are added, or removed.  
 To import the dependencies, navigate into finMessages/finmessages/  then execute:
-$ pip3 install -r requirements.txt
+
+`$ pip3 install -r requirements.txt`
 
 This article provides an excellent overview of what the requirements.txt file is, how to create/update it, and why.  
 https://learnpython.com/blog/python-requirements-file/
@@ -28,22 +30,27 @@ https://learnpython.com/blog/python-requirements-file/
 ## Model Changes/Database Updates
 Django provides a simple SqlLiteDb by default, though it can be configured to point to any other type of database.  Since speed and a functioning API were my goals here I left the default for my Db.  If you change any of the Models found in finMessages/finmessages/messageapi/models.py you will need to update the db.  You might also need to run these commands when you first spin up the service.
 The first command creates a migration entry - this tracks the history of the db changes and what they are.
-$ python3 manage.py makemigrations
+
+`$ python3 manage.py makemigrations`
 
 The next command actually performs the migration updates.
-$ python3 manage.py migrate
+
+`$ python3 manage.py migrate`
 
 ## Run The Server
 The next step is to start the server. Execute this command:
-$ python3 manage.py runserver
+
+`$ python3 manage.py runserver`
+
 You'll see output like this:
-Watching for file changes with StatReloader
+
+`Watching for file changes with StatReloader
 Performing system checks...
 System check identified no issues (0 silenced).
 July 30, 2022 - 23:26:52
 Django version 4.0.6, using settings 'finmessages.settings'
 Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+Quit the server with CONTROL-C.`
 
 Note that this prints out the server and port.  In this case it's just localhost:8000
 
