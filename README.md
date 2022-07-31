@@ -59,10 +59,12 @@ Now you should be able to call the APIs using this as the base URL.  Errors and 
 # API Documentation
 ## Create  (POST only)
 http://localhost:8000/create
+
 I limited this endpoint to POST requests only because it should only be used to create new messages.  The inputs required:
 * sender
 * receiver
 * body
+
 Right now there is no validation on specific formatting other than max length of each field.
 On the server side the following fields are added:
 * id  (auto-incrementing numeric)
@@ -72,6 +74,7 @@ On the server side the following fields are added:
 
 ## Receive Messages - General Access  (GET)
 http://localhost:8000/messages/
+
 This will return a list of all the messages.
 Query Parameter Options:
 * Pagination: ?limit=10&offset=0  Overrides the number of messages returned and enables paging via the offset.  Limit and offset should be positive whole numbers.  
@@ -82,8 +85,11 @@ Query Parameter Options:
 
 ## Receive Messages - Specific Recipient  (GET)
 http://localhost:8000/messages/receivernamehere/
+
 Replace receivernamehere with the actual receiver name.
+
 When messages are received via this URL path the received boolean is set to True.
+
 Query parameter options are the same as general EXCEPT the filter by receiver is ignored in deference to this receiver on the path.
 
 # TODOs
